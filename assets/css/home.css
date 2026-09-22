@@ -1,0 +1,381 @@
+/* Home page specific styles */
+@import url('navbar.css');
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(145deg, #e0f0f5 0%, #ffffff 80%);
+    border-radius: 32px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0a3142;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #2d5970;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #116466;
+    display: block;
+}
+
+.stat-label {
+    color: #4b6a7c;
+    font-size: 0.9rem;
+}
+
+.hero-image {
+    flex: 0 0 auto;
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0c344b;
+    margin-bottom: 0.5rem;
+}
+
+.section-sub {
+    color: #4b6a7c;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    border-left: 5px solid #78b9c5;
+    padding-left: 1.2rem;
+}
+
+/* Medical History Timeline */
+.medical-history {
+    margin: 4rem 0;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.timeline-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    border: 1px solid #e2eef5;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(17,100,102,0.1);
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #116466;
+}
+
+.timeline-date {
+    color: #116466;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0a3142;
+    margin-bottom: 1rem;
+}
+
+.timeline-desc {
+    color: #4b6a7c;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.timeline-tag {
+    background: #ecf6fc;
+    color: #1b5875;
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Quick Q&A */
+.quick-qa {
+    background: white;
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+}
+
+.qa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.qa-item {
+    padding: 1rem 0;
+    border-bottom: 1px dashed #cee2ef;
+}
+
+.qa-question {
+    font-weight: 600;
+    color: #0a3142;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.qa-question i {
+    color: #116466;
+    font-size: 1.2rem;
+}
+
+.qa-answer {
+    color: #4b6a7c;
+    font-size: 0.95rem;
+    padding-left: 2rem;
+    line-height: 1.6;
+}
+
+/* Success Stories */
+.success-stories {
+    margin: 4rem 0;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.story-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    border: 1px solid #e2eef5;
+    transition: 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(17,100,102,0.1);
+}
+
+.story-avatar {
+    width: 80px;
+    height: 80px;
+    background: #e1f2f7;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #116466;
+}
+
+.story-name {
+    font-weight: 600;
+    color: #0a3142;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.story-role {
+    color: #78b9c5;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.story-text {
+    color: #4b6a7c;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.story-rating {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+.story-rating i {
+    margin: 0 2px;
+}
+
+/* Reviews */
+.reviews {
+    background: linear-gradient(145deg, #f1f9fd, white);
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+}
+
+.review-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.8rem;
+    margin: 1.5rem 0;
+    border: 1px solid #e2eef5;
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 20px rgba(17,100,102,0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-header i {
+    font-size: 2.5rem;
+    color: #116466;
+}
+
+.reviewer-info h4 {
+    color: #0a3142;
+    margin-bottom: 0.2rem;
+}
+
+.reviewer-info p {
+    color: #78b9c5;
+    font-size: 0.9rem;
+}
+
+.review-text {
+    color: #4b6a7c;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.review-date {
+    color: #a0c0d0;
+    font-size: 0.8rem;
+}
+
+/* Quick Links Grid */
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.quick-link-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #116466;
+    border: 1px solid #e2eef5;
+    transition: 0.3s;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(17,100,102,0.1);
+}
+
+.quick-link-card i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .quick-qa {
+        padding: 1.5rem;
+    }
+}

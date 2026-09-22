@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /api/
+Disallow: /assets/
+Allow: /
+
+Sitemap: http://localhost/meducare/sitemap.xml

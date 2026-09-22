@@ -1,0 +1,37 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect to HTTPS (uncomment if using HTTPS)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Custom error pages
+ErrorDocument 404 /meducare/404.php
+ErrorDocument 403 /meducare/403.php
+ErrorDocument 500 /meducare/500.php
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(config\.php|database\.sql|\.htaccess|\.htpasswd)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

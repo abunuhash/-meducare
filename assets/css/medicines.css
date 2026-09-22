@@ -1,0 +1,340 @@
+/* Medicines page styles */
+@import url('navbar.css');
+
+.page-header {
+    background: linear-gradient(145deg, #e0f0f5 0%, #ffffff 80%);
+    border-radius: 32px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    color: #0a3142;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #2d5970;
+    font-size: 1.1rem;
+}
+
+/* Search and Filter */
+.search-section {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid #e2eef5;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #116466;
+    box-shadow: 0 0 0 3px rgba(17,100,102,0.1);
+}
+
+.search-box button {
+    background: #116466;
+    color: white;
+    border: none;
+    padding: 0 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-box button:hover {
+    background: #0d4f51;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(17,100,102,0.3);
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    padding: 0.6rem 1.3rem;
+    border: 1px solid #e2eef5;
+    border-radius: 30px;
+    background: white;
+    color: #4b6a7c;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+    background: #116466;
+    color: white;
+    border-color: #116466;
+}
+
+/* Medicine Grid */
+.medicine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.medicine-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    border: 1px solid #e2eef5;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.medicine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(17,100,102,0.1);
+}
+
+.medicine-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #116466, #78b9c5);
+}
+
+.medicine-category {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: #e1f2f7;
+    color: #116466;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.medicine-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0a3142;
+    margin-bottom: 0.5rem;
+}
+
+.medicine-manufacturer {
+    color: #78b9c5;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.medicine-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #e2eef5;
+    border-bottom: 1px solid #e2eef5;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-label {
+    color: #4b6a7c;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #0a3142;
+}
+
+.medicine-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #116466;
+    margin: 1rem 0;
+}
+
+.view-details {
+    width: 100%;
+    padding: 0.8rem;
+    background: #ecf6fc;
+    border: none;
+    border-radius: 10px;
+    color: #116466;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.view-details:hover {
+    background: #116466;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2eef5;
+}
+
+.modal-header h2 {
+    color: #0a3142;
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4b6a7c;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #116466;
+}
+
+/* Info Section */
+.info-section {
+    margin-bottom: 1.5rem;
+}
+
+.info-section h3 {
+    color: #116466;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.info-section p {
+    color: #4b6a7c;
+    line-height: 1.6;
+}
+
+.side-effects {
+    color: #dc3545;
+    background: #fff5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #dc3545;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    color: #4b6a7c;
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box button {
+        padding: 1rem;
+    }
+    
+    .medicine-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-tabs {
+        justify-content: center;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+    }
+}

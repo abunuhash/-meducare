@@ -1,0 +1,458 @@
+/* Human Body page styles */
+@import url('navbar.css');
+
+.body-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.body-header h1 {
+    font-size: 2.2rem;
+    color: #0a3142;
+    margin-bottom: 0.5rem;
+}
+
+.body-header p {
+    color: #4b6a7c;
+    font-size: 1.1rem;
+}
+
+/* Body Diagram Section */
+.body-diagram-section {
+    background: white;
+    border-radius: 30px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.body-diagram-section h2 {
+    color: #0a3142;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.diagram-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Body SVG */
+.body-image {
+    flex: 0 0 auto;
+    background: linear-gradient(145deg, #f8fafc, #e2eef5);
+    border-radius: 30px;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.body-svg {
+    width: 300px;
+    height: 600px;
+}
+
+.body-part {
+    fill: rgba(255, 223, 186, 0.7);
+    stroke: #116466;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.body-part:hover {
+    fill: rgba(17, 100, 102, 0.3);
+    stroke: #116466;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 5px rgba(17,100,102,0.3));
+}
+
+.part-label {
+    fill: #116466;
+    font-size: 10px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Body Labels */
+.body-labels {
+    flex: 1;
+    min-width: 250px;
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.body-labels h3 {
+    color: #0a3142;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.body-labels p {
+    color: #4b6a7c;
+    margin-bottom: 1.5rem;
+}
+
+.organs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.organ-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid #e2eef5;
+}
+
+.organ-item:hover {
+    background: #ecf6fc;
+    transform: translateX(5px);
+    border-color: #116466;
+}
+
+.organ-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #116466;
+}
+
+/* Skeleton Section */
+.skeleton-section {
+    background: white;
+    border-radius: 30px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.skeleton-section h2 {
+    color: #0a3142;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.skeleton-diagram {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Skeleton SVG */
+.skeleton-image {
+    flex: 0 0 auto;
+    background: #f8fafc;
+    border-radius: 30px;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.skeleton-svg {
+    width: 300px;
+    height: 600px;
+}
+
+.bone {
+    fill: #e9ecef;
+    stroke: #6c757d;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bone:hover {
+    fill: #116466;
+    stroke: #0a3142;
+    filter: drop-shadow(0 0 5px rgba(17,100,102,0.3));
+}
+
+/* Bone Info */
+.bone-info {
+    flex: 1;
+    min-width: 300px;
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.bone-info h3 {
+    color: #0a3142;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.bone-info p {
+    color: #4b6a7c;
+    margin-bottom: 1.5rem;
+}
+
+.bone-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.bone-category {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #e2eef5;
+}
+
+.bone-category h4 {
+    color: #116466;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2eef5;
+    font-size: 1rem;
+}
+
+.bone-category ul {
+    list-style: none;
+}
+
+.bone-category li {
+    padding: 0.4rem 0;
+    color: #4b6a7c;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.bone-category li:hover {
+    color: #116466;
+    transform: translateX(5px);
+}
+
+/* Educational Info */
+.educational-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-card {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #e2eef5;
+}
+
+.info-card h3 {
+    color: #116466;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card li {
+    padding: 0.5rem 0;
+    color: #4b6a7c;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px dashed #e2eef5;
+}
+
+.info-card li:last-child {
+    border-bottom: none;
+}
+
+.info-card li::before {
+    content: '•';
+    color: #116466;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2eef5;
+}
+
+.modal-header h2 {
+    color: #0a3142;
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4b6a7c;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #116466;
+}
+
+/* Body Part Content */
+.body-part-content {
+    color: #4b6a7c;
+}
+
+.part-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.body-part-content h4 {
+    color: #116466;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.body-part-content ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.body-part-content li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px dashed #e2eef5;
+}
+
+.body-part-content li::before {
+    content: '✓';
+    color: #116466;
+    font-weight: bold;
+}
+
+.part-image {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.part-image i {
+    font-size: 4rem;
+    color: #116466;
+    opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .body-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .diagram-container,
+    .skeleton-diagram {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .body-image,
+    .skeleton-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .body-svg,
+    .skeleton-svg {
+        width: 250px;
+        height: auto;
+    }
+    
+    .body-labels,
+    .bone-info {
+        width: 100%;
+    }
+    
+    .bone-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .educational-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-diagram-section,
+    .skeleton-section {
+        padding: 1.5rem;
+    }
+    
+    .body-svg,
+    .skeleton-svg {
+        width: 200px;
+    }
+    
+    .organs-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,35 @@
+Title: Meducare – Smart  Health Assistance  & Medicine Education System
+
+Category: Healthcare  / Education
+
+About:  
+ 	
+This project presents Meducare, a web-based smart healthcare and  medicine information with interactive health education. Using a MySQL database and PHP backend, it manages medicine inventory, user accounts, prescriptions, and educational content in real time. The HTML/CSS frontend provides a clean, responsive interface for searching medicines, viewing details and tracking user history. It also features a Medicine Q/A module, first-aid guidance, and interactive human body and skeletal system views, offering a centralized, user-friendly platform for both educational services and health awareness.
+
+Feature:
+
+ 
+ 
+ 	
+1. User Registration & Authentication – Secure sign-up and login system that stores user data and identifies each customer by a unique user ID.
+
+2. Medicine Browsing & Detailed View – Users can browse the full medicine catalog and view detailed information including usage, dosage, side effects, price, manufacturer.
+
+3. Medicine Q/A Section – Users can ask questions related to medicines, and Admin can provide answers. All questions and responses are dynamically managed in the system.
+
+4. First Aid Assistant – Users can enter symptoms (e.g., fever, headache), and the system provides basic first-aid suggestions using predefined logic or keyword-based intelligent processing.
+
+5. Interactive Human Body View – Educational module displaying a labeled human body diagram.
+
+6. Interactive Skeleton View – Educational module displaying a labeled human Skeleton diagram.
+
+7. Admin Medicine Management – Admin can add, edit, update, or delete medicine records including pricing details. Admin can monitor user activity, manage orders, moderate Q/A content, update educational modules.
+
+technology :
+ 
+ 	
+Backend: PHP
+Frontend: HTML, CSS 
+Database: MySQL
+IDE/Tools: VS Code, XAMPP
+Version Control: Git & GitHub

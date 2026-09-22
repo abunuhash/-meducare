@@ -1,0 +1,51 @@
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# PHPStorm
+.idea/
+*.iml
+
+# Logs
+*.log
+error_log
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# Uploads
+/uploads/
+/uploads/*
+
+# Configuration (don't upload sensitive data)
+/includes/config.php
+.env
+*.local
+
+# Temporary files
+*.tmp
+*.temp
+/cache/
+/tmp/
+
+# Vendor directories (if using composer)
+/vendor/
+
+# Node modules (if using npm)
+/node_modules/
+
+# XAMPP specific
+*.bak
+*.swp
+*.swo
+
+# Don't ignore database.sql (we need it for setup)
+!database.sql
